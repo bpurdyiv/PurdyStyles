@@ -1,0 +1,40 @@
+/**
+ *
+ * Application Specific Styles
+ *
+ **/
+/**
+ *
+ * PurdyStyles Base Imports
+ *
+ **/
+/**
+ *
+ * PurdyStyle Variables
+ *
+ **/
+/**
+ *
+ * PurdyStyle Grid Mixins
+ *
+ **/
+/**
+ * Make Grid 
+ **/
+/**
+ * Offsets
+ **/
+/**
+ * Pushes
+ **/
+/**
+ * Pulls
+ **/
+/**
+ *
+ * PurdyStyle Scaffolding
+ *
+ **/
+*, *:before, *:after {
+  box-sizing: border-box;
+}

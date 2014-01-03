@@ -1,0 +1,130 @@
+/**
+ *
+ * PurdyStyle Grid Mixins
+ *
+ **/
+
+/**
+ * Make Grid 
+ **/
+
+@mixin make-container() {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left:  ($grid-gutter / 2);
+    padding-right: ($grid-gutter / 2);
+    @include clearfix();
+}
+
+@mixin make-row($gutter: $grid-gutter) {
+    // margin-left: ($gutter / 2);
+    // margin-right: ($gutter / 2);
+    @include clearfix();
+}
+
+@mixin make-xs-col($columns, $gutter: $grid-gutter) {
+    position: relative;
+    float: left;
+    width: percentage(($columns / $grid-columns));
+    min-height: 1px;
+    padding: ($grid-gutter / 2);
+}
+
+@mixin make-sm-col($columns, $gutter: $grid-gutter) {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: ($grid-gutter / 2);
+    @include breakpoint(sm) {
+        float: left;
+        width: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin make-md-col($columns, $gutter: $grid-gutter) {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: ($grid-gutter / 2);
+    @include breakpoint(md) {
+        float: left;
+        width: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin make-lg-col($columns, $gutter: $grid-gutter) {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: ($grid-gutter / 2);
+    @include breakpoint(lg) {
+        float: left;
+        width: percentage(($columns / $grid-columns));
+    }
+}
+
+/**
+ * Offsets
+ **/
+@mixin make-xs-offset($columns) {
+    margin-left: percentage(($columns / $grid-columns));
+}
+@mixin make-sm-offset($columns) {
+    @include breakpoint(sm) {
+        margin-left: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-md-offset($columns) {
+    @include breakpoint(md) {
+        margin-left: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-lg-offset($columns) {
+    @include breakpoint(lg) {
+        margin-left: percentage(($columns / $grid-columns));
+    }
+}
+
+/**
+ * Pushes
+ **/
+@mixin make-xs-push($columns) {
+    left: percentage(($columns / $grid-columns));
+}
+@mixin make-sm-push($columns) {
+    @include breakpoint(sm) {
+        left: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-md-push($columns) {
+    @include breakpoint(md) {
+        left: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-lg-push($columns) {
+    @include breakpoint(lg) {
+        left: percentage(($columns / $grid-columns));
+    }
+}
+
+/**
+ * Pulls
+ **/
+@mixin make-xs-pull($columns) {
+    right: percentage(($columns / $grid-columns));
+}
+@mixin make-sm-pull($columns) {
+    @include breakpoint(sm) {
+        right: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-md-pull($columns) {
+    @include breakpoint(md) {
+        right: percentage(($columns / $grid-columns));
+    }
+}
+@mixin make-lg-pull($columns) {
+    @include breakpoint(lg) {
+        right: percentage(($columns / $grid-columns));
+    }
+}
