@@ -45,6 +45,10 @@ module.exports = function(grunt) {
         },
 
         autoprefixer: {
+            options: {
+                map: true
+            },
+
             dist: {
                 src: 'styles/css/global.css',
                 dest: 'styles/css/global.prefixed.css'
