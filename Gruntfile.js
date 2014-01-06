@@ -10,14 +10,14 @@ module.exports = function(grunt) {
                     'js/libs/*.js', // All JS in the libs folder
                     'js/global.js'  // This specific file
                 ],
-                dest: 'js/build/production.js',
+                dest: 'js/production.js',
             }
         },
 
         uglify: {
             build: {
-                src: 'js/build/production.js',
-                dest: 'js/build/production.min.js'
+                src: 'js/production.js',
+                dest: 'build/js/production.min.js'
             }
         },
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded',
+                    style: 'compressed',
                     sourcemap: 'true'
                 },
                 files: {
@@ -51,23 +51,23 @@ module.exports = function(grunt) {
 
             dist: {
                 src: 'styles/css/global.css',
-                dest: 'styles/css/global.prefixed.css'
+                dest: 'styles/css/global.min.css'
             }
         },
 
         cssmin: {
             combine: {
                 files: {
-                'styles/build/global.min.css': ['styles/css/global.prefixed.css']
+                'build/css/global.min.css': ['styles/css/global.min.css']
                 }
             }            
         },
 
         watch: {
-            options: { livereload: true },
+            
             scripts: {
                 files: ['js/*.js'],
-                tasks: ['concat', 'uglify'],
+                tasks: ['concat'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -76,13 +76,11 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['styles/sass/*.scss'],
-                tasks: ['sass', 'autoprefixer', 'cssmin'],
-                options: { spawn: false }
-            },
-
-            livereload: {
-                files: ['styles/build/global.min.css'],
-                options: { livereload: true }            
+                tasks: ['sass', 'autoprefixer'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
             }
         }
 

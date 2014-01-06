@@ -3,11 +3,11 @@
  * PurdyStyles Base Imports
  *
  **/
-
+@import "../libs/normalize";
 @import "variables";
 @import "mixins";
 @import "grid";
-@import "scaffold"
+@import "scaffold";
 // @import "typography"; // Page HEaders
 // @import "buttons"; //TODO
 // @import "forms"; // Submit Btn
