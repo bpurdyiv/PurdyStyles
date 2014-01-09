@@ -1,0 +1,41 @@
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    // To Use, @extend %bulleted
+    &%bulleted {
+        list-style-type: disc;
+        margin-bottom: ($line-height / 2);
+        padding-left: $line-height;
+    }
+    
+    // To Use, @extend %numbered
+    &%numbered {
+        list-style-type: decimal;
+        margin-bottom: ($line-height / 2);
+        padding-left: $line-height;
+    }
+}
+
+ul.bulleted {
+    @extend %bulleted;
+}
+
+ol.numbered {
+    @extend %numbered;
+}
+
+dl {
+    line-height: $line-height;
+    margin-bottom: ($line-height / 2);
+
+    dt {
+        font-weight: bold;
+        margin-top: ($line-height / 2);
+    }
+
+    dd {
+        margin: 0 1em;
+    }
+}

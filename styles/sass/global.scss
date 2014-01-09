@@ -5,3 +5,7 @@
  **/
 
 @import "purdystyles";
+
+.container {
+    @include make-container();
+}

@@ -1,0 +1,36 @@
+@mixin colorize-flash($color) {
+    background: $color;
+    color: darken($color, 60);
+
+    a {
+        color: darken($color, 70);
+
+        &:hover {
+            color: darken($color, 90);
+        }
+    }
+}
+
+.flash {
+    font-weight: bold;
+    margin-bottom: $line-height / 2;
+    padding: $line-height / 2;
+    border-radius: 3px;
+
+    .close {
+        float: right;
+        color: $dark-gray;
+    }   
+}
+
+.error {
+    @include colorize-flash($error-color);
+}
+
+.notice {
+    @include colorize-flash($notice-color);
+}
+
+.success {
+    @include colorize-flash($success-color);
+}

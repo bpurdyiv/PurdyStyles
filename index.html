@@ -3,11 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <title>PurdyStyles</title>
-    <link rel="stylesheet" href="/styles/css/global.min.css">
+    <link rel="stylesheet" href="/styles/css/global.prefixed.css">
 </head>
 <body>
     <div class="container">
-        <h1>PurdyStyles</h1>
-    </div>
+        <h1>PurdyStyles <small>Example Page</small></h1>
+        <p>This is a example and maybe later a docs page of PurdyStyles</p>
+        <hr>
+
+        <h1>Typography</h1>
+        <p>Shows default heading sizes along with their coorsponding small sizes</p>
+
+        <h1>h1 Heading <small>h1 Small</small></h1>
+        <h2>h2 Heading <small>h2 Small</small></h2>
+        <h3>h3 Heading <small>h3 Small</small></h3>
+        <h4>h4 Heading <small>h4 Small</small></h4>
+        <h5>h5 Heading <small>h5 Small</small></h5>
+        <h6>h6 Heading <small>h6 Small</small></h6>
+        
+        <h3>Paragraphs and Misc HTML Elements</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, reprehenderit, impedit aliquid assumenda eveniet quasi iste distinctio esse iusto dolorum fuga qui odit. Voluptatem, dolorem, dolore doloremque est inventore maiores!</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, consequuntur esse eum rem numquam consectetur dolorem at ducimus repudiandae corrupti eaque ipsum quasi nam iure molestiae. Veniam, labore corporis ullam.</p>
+        
+        <ul>
+            <li><a href="#">link tag</a></li>
+            <li><em>emphasis</em></li>
+            <li><b>Bold</b> and <strong>Strong</strong></li>
+            <li>Super <sup>script</sup></li>
+            <li>Sub <sub>script</sub></li>
+            <li>Fancy Words <cite>cite</cite></li>
+            <li><acronym title="National Basketball Association">NBA</acronym></li>
+            <li><abbr title="Avenue">AVE</abbr></li>
+        </ul>
+
+        <blockquote>
+            <p>Your soo Purdy!</p>
+            <cite>Everyone in the world</cite>
+        </blockquote>
+
+<pre>
+    <code>
+server {
+    listen   80;     
+    root /usr/share/nginx/www;
+    index index.php index.html index.htm;
+
+    server_name example.com;
+}
+    </code>
+</pre>
+
+        <code>$ git clone git@github.com:bpurdyiv/PurdyStyles.git</code>
+
+        <hr>
+
+        <h1>Forms</h1>
+
+        <fieldset>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, incidunt, excepturi expedita illum similique repellendus quo placeat neque nihil consequuntur corporis ad consequatur odit libero dolor. Error pariatur fugiat numquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, velit laborum adipisci dolorem esse amet iusto perferendis dicta! Et, dignissimos eos neque temporibus qui incidunt nulla provident ducimus nemo omnis!</p>
+
+            <form>
+                <h2>Form Element</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, laboriosam, et error molestias doloremque nihil a repellendus labore recusandae dicta omnis odit alias! Itaque, magni, ea voluptate aperiam totam eligendi.</p>
+
+                <label for="text_field">Text Field:</label>
+                <input type="text" id="text_field">
+
+                <label for="text_area">Text Area:</label>
+                <textarea id="text_area"></textarea>
+
+                <label for="select_element">Select Element:</label>
+                <select name="select_element">
+                    <optgroup label="Option Group 1">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </optgroup>
+                    <optgroup label="Option Group 2">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </optgroup>
+                </select>
+
+                <label for="radio_buttons">Radio Buttons:</label>
+                <label>
+                    <input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
+                </label>
+                <label>
+                    <input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
+                </label>
+                <label>
+                    <input type="radio" class="radio" name="radio_button" value="radio_3"> Radio 3
+                </label>
+
+                <label for="checkboxes">Checkboxes:</label>
+                <label>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Radio 1
+                </label>
+                <label>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Radio 2
+                </label>
+                <label>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3"> Radio 3
+                </label>
+
+                <label for="password">Password:</label>
+                <input type="password" class="password" name="password">
+
+                <label for="file">File Input:</label>
+                <input type="file" class="file" name="file">
+
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </fieldset>
+
+        <hr>        
+        
+        <h1>Table</h1>
+        <table class="striped hover">
+            <thead>
+                <tr>
+                    <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Column 1</td><td>Column 2</td><td>Column 3</td>
+                </tr>
+                <tr>
+                    <td>Column 1</td><td>Column 2</td><td>Column 3</td>
+                </tr>
+                <tr>
+                    <td>Column 1</td><td>Column 2</td><td>Column 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Flash / error messages</h1>
+        <div class="flash success">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            This is a success message <a href="#">with a link</a>
+        </div>
+        <div class="flash error">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            This is an error message <a href="#">with a link</a>
+        </div>
+        <div class="flash notice">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            This is an notice message <a href="#">with a link</a>
+        </div>
+
+    </div> <!-- /.container -->
+    <script src="/js/production.js"></script>
 </body>
 </html>

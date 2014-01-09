@@ -145,6 +145,7 @@ dfn {
  */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -326,6 +327,8 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -453,6 +456,8 @@ table {
  *
  **/
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -515,6 +520,7 @@ p {
 a {
   color: #477dca;
   text-decoration: none;
+  -webkit-transition: color 0.1s linear;
   transition: color 0.1s linear;
 }
 a:hover {
@@ -655,10 +661,12 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"] {
+  -webkit-transition: border-color;
   transition: border-color;
   background-color: white;
   border-radius: 3px;
   border: 1px solid #dddddd;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -699,6 +707,7 @@ input[type="month"]:focus,
 input[type="time"]:focus,
 input[type="week"]:focus {
   border-color: #477dca;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   outline: none;
 }
@@ -724,6 +733,9 @@ select {
 
 input[type="submit"] {
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -861,4 +873,4 @@ dl dd {
   clear: both;
 }
 
-/*# sourceMappingURL=global.css.map */
+/*# sourceMappingURL=global.prefixed.css.map */

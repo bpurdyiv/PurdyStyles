@@ -1,0 +1,133 @@
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+    line-height: 1.25em;
+    margin: 0 0 0.4em 0;
+    text-rendering: optimizeLegibility;
+    
+    small, .small {
+        font-weight: normal;
+        line-height: 1;
+        color: $headings-small-color;
+        font-size: 60%;
+    }
+}
+
+h1 {
+    font-size: ($font-size * 2.5);
+}
+
+h2 {
+    font-size: ($font-size * 2.25);
+}
+
+h3 {
+    font-size: ($font-size * 2);
+}
+
+h4 {
+    font-size: ($font-size * 1.75);
+}
+
+h5 {
+    font-size: ($font-size * 1.5);
+}
+
+h6 {
+    font-size: ($font-size * 1.25);
+}
+
+p {
+    margin: 0 0 ($line-height / 2);
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: $hover-color;
+    }
+
+    &:active, &:focus {
+        color: $hover-color;
+        outline: none;
+    }
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+abbr, acronym {
+border-bottom: 1px dotted;
+cursor: help;
+}
+
+hr {
+    border-bottom: 1px solid $border-color;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: $line-height 0;
+}
+
+
+address {
+    display: block;
+    margin: ($line-height / 2) 0; 
+}
+
+blockquote {
+    border-left: 2px solid $border-color;
+    margin: $line-height 0;
+    padding-left: ($line-height / 2);
+}
+
+cite {
+    color: lighten($font-color, 15);
+    font-style: italic;
+
+    &:before {
+        content: '\2014 \00A0'; // - &nbsp;
+    }
+}
+
+code {
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    font-size: 0.8em;
+    padding: 0 5px;
+    margin: 0 2px;
+}
+
+pre {
+    border: 1px solid $light-gray;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    font-size: 0.8em;
+    padding: 6px 10px;
+    margin: 0 2px;
+
+    code {
+        border: none;
+        font-size: 1em;
+    }    
+}

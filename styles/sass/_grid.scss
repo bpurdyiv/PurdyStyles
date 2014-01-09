@@ -128,3 +128,20 @@
         right: percentage(($columns / $grid-columns));
     }
 }
+
+/**
+ * Responsive Container
+ **/
+
+@include breakpoint(sm) {
+    .container { width: $container-sm; }
+}
+
+@include breakpoint(md) {
+    .container { width: $container-md; }
+}
+
+@include breakpoint(lg) {
+    .container { width: $container-lg; }
+}
+

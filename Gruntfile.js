@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed',
+                    style: 'expanded',
                     sourcemap: 'true'
                 },
                 files: {
@@ -51,14 +51,14 @@ module.exports = function(grunt) {
 
             dist: {
                 src: 'styles/css/global.css',
-                dest: 'styles/css/global.min.css'
+                dest: 'styles/css/global.prefixed.css'
             }
         },
 
         cssmin: {
             combine: {
                 files: {
-                'build/css/global.min.css': ['styles/css/global.min.css']
+                'build/css/global.min.css': ['styles/css/global.prefixed.css']
                 }
             }            
         },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
         watch: {
             
             scripts: {
-                files: ['js/*.js'],
+                files: ['js/**/*.js'],
                 tasks: ['concat'],
                 options: {
                     spawn: false,
@@ -79,6 +79,13 @@ module.exports = function(grunt) {
                 tasks: ['sass', 'autoprefixer'],
                 options: {
                     spawn: false,
+                    livereload: true
+                }
+            },
+
+            html: {
+                files: 'index.html',
+                options: {
                     livereload: true
                 }
             }

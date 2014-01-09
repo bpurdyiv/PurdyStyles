@@ -1,0 +1,22 @@
+@mixin btn() {
+    -webkit-appearance: none;
+    display: inline;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    color: #FFF;
+    background-color: $btn-color;
+    padding: 6px 12px;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: darken($btn-color, 20%);
+    }
+}
+
+.btn {
+    @include btn();
+}

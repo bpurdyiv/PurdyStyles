@@ -1,0 +1,88 @@
+fieldset {
+    background: $fieldset-background;
+    border: 1px solid $border-color;
+    margin: 0 0 ($line-height / 2) 0;
+    padding: $line-height;
+    border-radius: 3px;
+}
+
+input,
+label,
+select {
+    display: block;
+    font-family: $form-font-family;
+    font-size: $form-font-size;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: ($line-height / 4);
+
+    &.required:after {
+        content: "\u2217";  // *
+    }
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+    transition: border-color;
+    background-color: white;
+    border-radius: $form-border-radius;
+    border: 1px solid $form-border-color;
+    box-shadow: $form-box-shadow;
+    font-family: $form-font-family;
+    font-size: $form-font-size;
+    margin-bottom: ($line-height);
+    padding: ($line-height / 2);
+    width: 100%;
+
+    &:hover {
+        border-color: darken($form-border-color, 10);
+    }
+
+    &:focus {
+        border-color: $form-border-color-focus;
+        box-shadow: $form-box-shadow-focus;
+        outline: none;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: inline;
+    margin-right: ($line-height / 4);
+}
+
+input[type="file"] {
+    width: 100%;
+    margin-bottom: $line-height;
+}
+
+select {
+    width: auto;
+    margin-bottom: $line-height;
+}
+
+input[type="submit"] {
+    @extend .btn;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
